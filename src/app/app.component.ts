@@ -6,9 +6,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [DashboardComponent],
   template: `
     <main>
-      <header class="brand-name">
-        <img class="brand-logo" src="/logo.svg" alt="logo" aria-hidden="true" />
-      </header>
       <section class="content">
         <app-dashboard></app-dashboard>
       </section>
