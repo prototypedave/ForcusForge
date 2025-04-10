@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TaskList } from '../task-list';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
   imports: [CommonModule],
   template: `
     <div class="dashboard-layout">
@@ -15,9 +17,7 @@ import { CommonModule } from '@angular/common';
         <section class="task-queue">
           <h2>TASK LIST</h2>
           <ul>
-            <li>Prepare presentation</li>
-            <li>Write report</li>
-            <li>Read book</li>
+          <li >{{taskList.title}}</li>
           </ul>
           <button class="primary" type="button">+ Add Task</button>
         </section>
@@ -62,5 +62,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-
+  @Input() taskList!:TaskList;
 }

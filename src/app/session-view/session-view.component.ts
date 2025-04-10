@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TaskList } from '../task-list';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-session-view',
   standalone: true,
+  imports: [CommonModule],
   template: `
     <div class="session-view">
       <!-- LEFT PANEL -->
@@ -23,8 +26,7 @@ import { Component } from '@angular/core';
         </div>
 
         <ul class="micro-goals">
-          <li>✔ Create slides</li>
-          <li>✔ Outline key points</li>
+          <li *ngFor="let micro of taskList.micro">{{ micro.name }}</li>
         </ul>
 
         <div class="distraction-log">
@@ -59,4 +61,6 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./session-view.component.css']
 })
-export class SessionViewComponent { }
+export class SessionViewComponent {
+  @Input() taskList!:TaskList;
+ }
