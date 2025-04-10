@@ -1,13 +1,14 @@
 import {Component} from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SessionViewComponent } from './session-view/session-view.component';
 
 @Component({
   selector: 'app-root', 
-  imports: [DashboardComponent],
+  imports: [SessionViewComponent],
   template: `
     <main>
       <section class="content">
-        <app-dashboard></app-dashboard>
+        <app-session-view></app-session-view>
       </section>
     </main>
   `,

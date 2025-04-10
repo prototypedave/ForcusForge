@@ -1,0 +1,152 @@
+/* Layout */
+.session-view {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Left Sidebar */
+  .sidebar-left {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .sidebar-left .task-name {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .outer-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #e0f7fa;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .inner-circle {
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00796b;
+  }
+  
+  .stepper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .stepper button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .micro-goals {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .micro-goals li {
+    background: #f0f4f8;
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-radius: 6px;
+  }
+  
+  .distraction-log {
+    margin-top: auto;
+  }
+  
+  .add-distraction {
+    background: #ff7043;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Right Sidebar */
+  .sidebar-right {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .timeline {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .timeline-block {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .work {
+    background: #42a5f5;
+  }
+  
+  .break {
+    background: #66bb6a;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .mood-tracker {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .mood-tracker button {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
