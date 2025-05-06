@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskList } from '../task-list';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +18,9 @@ import { TaskList } from '../task-list';
         <section class="task-queue">
           <h2>TASK LIST</h2>
           <ul>
-          <li >{{taskList.title}}</li>
+            <li *ngFor="let task of myTaskList">
+              {{ task.title }}
+            </li>
           </ul>
           <button class="primary" type="button">+ Add Task</button>
         </section>
@@ -62,5 +65,10 @@ import { TaskList } from '../task-list';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  @Input() taskList!:TaskList;
+  myTaskList: TaskList[] = [];
+  taskService: TasksService = inject(TasksService);
+
+  constructor() {
+    this.myTaskList = this.taskService.getAllTasks();
+  }
 }

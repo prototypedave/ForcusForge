@@ -1,19 +1,18 @@
 import {Component, inject} from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SessionViewComponent } from './session-view/session-view.component';
 import { TaskList } from './task-list';
 import { TasksService } from './tasks.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root', 
-  imports: [DashboardComponent, SessionViewComponent],
+  imports: [CommonModule, DashboardComponent, SessionViewComponent, RouterModule],
   template: `
     <main>
       <section class="content">
-        <app-dashboard *ngFor="let taskList of myTaskList"
-        [taskList]="taskList"></app-dashboard>
-        <app-session-view *ngFor="let taskList of myTaskList"
-        [taskList]="taskList"></app-session-view>
+        <router-outlet></router-outlet>
       </section>
     </main>
   `,
